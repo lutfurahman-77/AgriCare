@@ -230,6 +230,20 @@ ALTER TABLE [dbo].[DoctorReviews]  WITH CHECK ADD  CONSTRAINT [CK_DoctorReviews_
 GO
 ALTER TABLE [dbo].[DoctorReviews] CHECK CONSTRAINT [CK_DoctorReviews_Rating]
 GO
+	 -- Doctor Service Summary: JOIN + GROUP BY + HAVING + COUNT
+SELECT
+    U.UserID AS DoctorID,
+    U.Name AS DoctorName,
+    COUNT(SR.RequestID) AS CompletedServices
+FROM dbo.Users U
+INNER JOIN dbo.ServiceRequests SR
+    ON U.UserID = SR.DoctorID
+WHERE U.Role = 'Doctor'
+  AND SR.RequestStatus = 'Completed'
+GROUP BY U.UserID, U.Name
+HAVING COUNT(SR.RequestID) > 0
+ORDER BY CompletedServices DESC;
+GO
 USE [master]
 GO
 ALTER DATABASE [AgriCareDB] SET  READ_WRITE 
