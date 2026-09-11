@@ -265,6 +265,15 @@ ALTER TABLE [dbo].[DoctorReviews]  WITH CHECK ADD  CONSTRAINT [CK_DoctorReviews_
 GO
 ALTER TABLE [dbo].[DoctorReviews] CHECK CONSTRAINT [CK_DoctorReviews_Rating]
 GO
+	 ALTER TABLE [dbo].[ServiceRequests] WITH CHECK
+ADD CONSTRAINT [FK_ServiceRequests_Doctor]
+FOREIGN KEY ([DoctorID])
+REFERENCES [dbo].[Users] ([UserID])
+GO
+
+ALTER TABLE [dbo].[ServiceRequests]
+CHECK CONSTRAINT [FK_ServiceRequests_Doctor]
+GO
 	 -- Doctor Service Summary: JOIN + GROUP BY + HAVING + COUNT
 SELECT
     U.UserID AS DoctorID,
