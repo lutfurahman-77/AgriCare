@@ -274,6 +274,15 @@ GO
 ALTER TABLE [dbo].[ServiceRequests]
 CHECK CONSTRAINT [FK_ServiceRequests_Doctor]
 GO
+	 ALTER TABLE [dbo].[DoctorPayments] WITH CHECK
+ADD CONSTRAINT [FK_DoctorPayments_Doctor]
+FOREIGN KEY ([DoctorID])
+REFERENCES [dbo].[Users] ([UserID])
+GO
+
+ALTER TABLE [dbo].[DoctorPayments]
+CHECK CONSTRAINT [FK_DoctorPayments_Doctor]
+GO
 	 -- Doctor Service Summary: JOIN + GROUP BY + HAVING + COUNT
 SELECT
     U.UserID AS DoctorID,
