@@ -231,7 +231,15 @@ ADD CONSTRAINT [FK_AnimalProblems_Users]
 FOREIGN KEY ([FarmerId])
 REFERENCES [dbo].[Users] ([UserID])
 GO
+ALTER TABLE [dbo].[ServiceRequests] WITH CHECK
+ADD CONSTRAINT [FK_ServiceRequests_Users]
+FOREIGN KEY ([FarmerID])
+REFERENCES [dbo].[Users] ([UserID])
+GO
 
+ALTER TABLE [dbo].[ServiceRequests]
+CHECK CONSTRAINT [FK_ServiceRequests_Users]
+GO
 ALTER TABLE [dbo].[AnimalProblems]
 CHECK CONSTRAINT [FK_AnimalProblems_Users]
 GO
