@@ -7,10 +7,9 @@ AgriCare is a C# Windows Forms-based animal healthcare service management system
 ## Main Features
 
 - User registration and login
-- Role-based access for Admin, Manager, Doctor and Farmer
+- Role-based access for Manager, Doctor and Farmer
 - Farmer can report animal health problems
-- Manager can manage reported problems and assign doctors
-- Doctor can view assigned problems and handle them
+- Doctor can view assigned problems and handle them.If Doctor could not handle it. he can be transfer the problem.
 - Doctor payment management
 - Doctor rating and review system
 - Service request management
@@ -20,20 +19,16 @@ AgriCare is a C# Windows Forms-based animal healthcare service management system
 
 ## User Roles
 
-### Admin
+### Manager
 - Manage users
 - Approve registrations
-- Manage system users
-
-### Manager
 - Manage reported animal problems
-- Assign doctors
 - Manage service requests
 
 ### Doctor
 - View assigned animal problems
 - Handle reported problems
-- Manage doctor-related information and payments
+- Manage doctor-related information
 - Receive ratings and reviews
 
 ### Farmer
@@ -41,6 +36,7 @@ AgriCare is a C# Windows Forms-based animal healthcare service management system
 - Report animal health problems
 - View service requests
 - Make payments
+- view available doctor
 - Track problem status
 
 ## Technologies Used
