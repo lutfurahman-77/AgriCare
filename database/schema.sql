@@ -252,6 +252,15 @@ GO
 ALTER TABLE [dbo].[DoctorReviews]
 CHECK CONSTRAINT [FK_DoctorReviews_Farmer]
 GO
+	 ALTER TABLE [dbo].[DoctorReviews] WITH CHECK
+ADD CONSTRAINT [FK_DoctorReviews_Doctor]
+FOREIGN KEY ([DoctorID])
+REFERENCES [dbo].[Users] ([UserID])
+GO
+
+ALTER TABLE [dbo].[DoctorReviews]
+CHECK CONSTRAINT [FK_DoctorReviews_Doctor]
+GO
 ALTER TABLE [dbo].[DoctorReviews]  WITH CHECK ADD  CONSTRAINT [CK_DoctorReviews_Rating] CHECK  (([Rating]>=(1) AND [Rating]<=(5)))
 GO
 ALTER TABLE [dbo].[DoctorReviews] CHECK CONSTRAINT [CK_DoctorReviews_Rating]
