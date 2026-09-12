@@ -248,7 +248,7 @@ GROUP BY U.UserID, U.Name
 HAVING COUNT(SR.RequestID) > 0
 ORDER BY CompletedServices DESC;
 GO
-
+```
 This query generates a summary of completed services for each Doctor. It uses an INNER JOIN between the Users and ServiceRequests tables through the Doctor ID. The WHERE clause ensures that only Doctors and completed service requests are considered. The COUNT() function calculates the number of completed services for each Doctor. GROUP BY groups the results by Doctor ID and Doctor name, while HAVING ensures that only Doctors with at least one completed service are included. The results are sorted in descending order according to the number of completed services.
 
 
