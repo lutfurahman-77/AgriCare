@@ -13,7 +13,17 @@ AgriCare is a C# Windows Forms-based animal healthcare service management system
 - **Assignment:** Project
 - **University:** American International University-Bangladesh (AIUB)
 - **Course Teacher / Supervisor:** DR. MD IFTEKHARUL MOBIN
-- 
+
+## Team Members
+
+| Name | ID | Role | Contribution |
+|---|---|---|---|
+| Lutfur Rahman | 24-57054-1 | Manager | Developed Manager-side functionalities and contributed to overall system development and integration. |
+| Md. Jubair Hasan Tamim | 23-51855-2 | Database | Designed and developed the database, including tables, relationships, constraints, and SQL scripts. |
+| Asfi Sabrin Neha | 24-56321-1 | Doctor |Developed the Doctor-side functionalities of the system. |
+| Md julfiker ahmad Rafi | 23-52116-2 | Farmer |Developed the Farmer-side functionalities of the system. |
+
+
 ## Main Features
 
 - User registration and login
@@ -49,14 +59,7 @@ AgriCare is a C# Windows Forms-based animal healthcare service management system
 - view available doctor
 - Track problem status
 
-## Team Members
 
-| Name | ID | Role | Contribution |
-|---|---|---|---|
-| Lutfur Rahman | 24-57054-1 | Manager | Developed Manager-side functionalities and contributed to overall system development and integration. |
-| Md. Jubair Hasan Tamim | 23-51855-2 | Database | Designed and developed the database, including tables, relationships, constraints, and SQL scripts. |
-| Asfi Sabrin Neha | 24-56321-1 | Doctor |Developed the Doctor-side functionalities of the system. |
-| Md julfiker ahmad Rafi | 23-52116-2 | Farmer |Developed the Farmer-side functionalities of the system. |
 
 
 ## Case Study
