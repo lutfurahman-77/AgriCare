@@ -234,7 +234,7 @@ The database contains six main tables:
 
 ### Doctor Service Summary Query
 
-sql
+```sql
 SELECT
     U.UserID AS DoctorID,
     U.Name AS DoctorName,
